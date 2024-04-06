@@ -45,7 +45,11 @@ Singleton {
 			readonly property string warning: ""
 		}
 		readonly property QtObject volume: QtObject {
-			// 
+			// 0  1  2  bluetooth  
+			readonly property string l0: ""
+			readonly property string l1: ""
+			readonly property string l2: ""
+			readonly property string muted: ""
 		}
 	}
 }
