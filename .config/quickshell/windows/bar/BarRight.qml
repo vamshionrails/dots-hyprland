@@ -4,8 +4,8 @@ import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
-import "../lib"
-import ".."
+import "../../lib"
+import "../../"
 
 RowLayout {
     id: barRight
@@ -18,31 +18,44 @@ RowLayout {
             spacing: 3
             Text {
                 color: Config.colors.fg0
-                font.family: Icons.fluent.fontFamily
-                font.pointSize: Icons.fluent.fontPointSize
+                font {
+                    family: Icons.fluent.fontFamily
+                    pointSize: Config.font.fluentIconPointSize
+                }
+                renderType: Text.NativeRendering
                 text: `${Icons.fluent.battery.c0}`
             }
             Text {
                 color: Config.colors.fg0
-                font.family: Icons.fluent.fontFamily
-                font.pointSize: Icons.fluent.fontPointSize
+                font {
+                    family: Icons.fluent.fontFamily
+                    pointSize: Config.font.fluentIconPointSize
+                }
+                renderType: Text.NativeRendering
                 text: `${Icons.fluent.wifi.strong}`
             }
             Text {
                 color: Config.colors.fg0
-                font.family: Icons.fluent.fontFamily
-                font.pointSize: Icons.fluent.fontPointSize
+                font {
+                    family: Icons.fluent.fontFamily
+                    pointSize: Config.font.fluentIconPointSize
+                }
+                renderType: Text.NativeRendering
                 text: `${Icons.fluent.volume.l2}`
             }
         }
     }
     BarButton {
         ColumnLayout {
-            spacing: 0
+            spacing: -5
             Text {
                 id: clock
                 color: Config.colors.fg0
-                font.pointSize: Config.font.pointSize
+                font {
+                    pointSize: Config.font.pointSize
+                    family: Config.font.family
+                }
+                renderType: Text.NativeRendering
                 Layout.alignment: Qt.AlignRight
                 Process {
                     command: ["date", "+%I:%M %p"]
@@ -55,7 +68,11 @@ RowLayout {
             Text {
                 id: clockdate
                 color: Config.colors.fg0
-                font.pointSize: Config.font.pointSize
+                font {
+                    pointSize: Config.font.pointSize
+                    family: Config.font.family
+                }
+                renderType: Text.NativeRendering
                 Layout.alignment: Qt.AlignRight
                 Process {
                     command: ["date", "+%d/%m/%Y"]

@@ -3,7 +3,8 @@ import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
-import '..'
+import ".."
+import "./bar"
 
 
 PanelWindow {
@@ -23,6 +24,7 @@ PanelWindow {
     anchors.fill: parent
     color: Config.colors.bg0
 
+    BarCenter{}
     BarRight{}
   }
 }

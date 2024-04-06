@@ -3,6 +3,7 @@ import QtQuick
 import Quickshell
 
 Singleton {
+	readonly property bool debug: true
 	readonly property QtObject colors: QtObject {
 		readonly property string transparent: "#00000000"
 		readonly property string bg0: "#D01c1c1c"
@@ -12,6 +13,8 @@ Singleton {
 		readonly property string bg0Active: "#F06b6b6b"
 	}
 	readonly property QtObject font: QtObject {
-		readonly property int pointSize: 9
+		readonly property string family: "Noto Sans"
+		readonly property int pointSize: 8
+		readonly property int fluentIconPointSize: 16
 	}
 }

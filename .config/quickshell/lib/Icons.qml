@@ -5,7 +5,6 @@ import Quickshell
 Singleton {
 	readonly property QtObject fluent: QtObject {
 		readonly property string fontFamily: "FluentSystemIcons-Regular"
-		readonly property int fontPointSize: 18
 		readonly property QtObject wifi: QtObject {
 			// 
 			readonly property string strong: ""
