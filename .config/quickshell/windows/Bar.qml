@@ -24,8 +24,11 @@ PanelWindow {
     anchors.fill: parent
     color: Config.colors.bg0
 
-    BarCenter{}
-    BarRight{}
+    BarCenter {}
+    BarRight {}
   }
-  StartMenu { id: "startMenu" }
+  StartMenu {
+    id: startMenu
+    parent: winbar
+  }
 }

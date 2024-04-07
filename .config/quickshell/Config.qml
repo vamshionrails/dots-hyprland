@@ -8,7 +8,7 @@ Singleton {
 		readonly property string transparent: "#00000000"
 		readonly property string bg0: "#8F292929"
 		readonly property string fg0: "#FFFFFFFF"
-		readonly property string border0: "#D0121212"
+		readonly property string border0: "#4F878787"
 		readonly property string bg0Hover: "#1F9c9c9c"
 		readonly property string bg0Active: "#2bc9c9c9"
 	}

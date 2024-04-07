@@ -16,16 +16,12 @@ RowLayout {
     }
     spacing: 5
     BarButton {
-        onClicked: startMenu.visible = !startMenu.visible
+        extraActiveCondition: startMenu.visible
+        onClicked: startMenu.open = !startMenu.open
         Image {
             anchors.centerIn: parent
             source: "../../assets/distributor-logo-windows.svg"
             fillMode: Image.PreserveAspectFit
         }
-        // icon {
-        //     name: "distributor-logo-windows"
-        //     height: 32
-        //     width: 32
-        // }
     }
 }
