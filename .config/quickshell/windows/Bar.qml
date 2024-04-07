@@ -27,4 +27,5 @@ PanelWindow {
     BarCenter{}
     BarRight{}
   }
+  StartMenu { id: "startMenu" }
 }

@@ -6,6 +6,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import "../../lib"
 import "../../"
+import "../"
 
 RowLayout {
     id: barRight

@@ -6,11 +6,11 @@ Singleton {
 	readonly property bool debug: true
 	readonly property QtObject colors: QtObject {
 		readonly property string transparent: "#00000000"
-		readonly property string bg0: "#D01c1c1c"
+		readonly property string bg0: "#8F292929"
 		readonly property string fg0: "#FFFFFFFF"
 		readonly property string border0: "#D0121212"
-		readonly property string bg0Hover: "#E0525252"
-		readonly property string bg0Active: "#F06b6b6b"
+		readonly property string bg0Hover: "#1F9c9c9c"
+		readonly property string bg0Active: "#2bc9c9c9"
 	}
 	readonly property QtObject font: QtObject {
 		readonly property string family: "Noto Sans"
