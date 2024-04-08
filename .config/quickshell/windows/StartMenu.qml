@@ -9,7 +9,6 @@ import Quickshell.Io
 import Quickshell.Wayland
 
 PopupWindow {
-    // id: startMenu
 
     id: startMenu
 
@@ -37,8 +36,8 @@ PopupWindow {
 
         width: startMenu.width - 24
         height: startMenu.height - 24
-        x: 12
         y: startMenu.height
+        x: 12
         radius: 12
         color: Config.colors.bg0
 
@@ -52,9 +51,8 @@ PopupWindow {
 
             target: popupItem
             property: "y"
-            velocity: 2000
+            // velocity: 2000
             duration: 200
-            reversingMode: SmoothedAnimation.Immediate
             onFinished: {
                 if (popupItem.y == startMenu.height)
                     startMenu.visible = false;
@@ -63,6 +61,7 @@ PopupWindow {
 
             easing {
                 period: 200
+                type: Easing.BezierSpline
                 bezierCurve: [0.1, 1, 0, 1]
             }
 

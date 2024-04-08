@@ -18,12 +18,12 @@ RowLayout {
         RowLayout {
             spacing: 3
             Text {
+                id: battIndicator
                 color: Config.colors.fg0
                 font {
                     family: Icons.fluent.fontFamily
                     pointSize: Config.font.fluentIconPointSize
                 }
-                renderType: Text.NativeRendering
                 text: `${Icons.fluent.battery.c0}`
             }
             Text {
@@ -32,7 +32,6 @@ RowLayout {
                     family: Icons.fluent.fontFamily
                     pointSize: Config.font.fluentIconPointSize
                 }
-                renderType: Text.NativeRendering
                 text: `${Icons.fluent.wifi.strong}`
             }
             Text {
@@ -41,7 +40,6 @@ RowLayout {
                     family: Icons.fluent.fontFamily
                     pointSize: Config.font.fluentIconPointSize
                 }
-                renderType: Text.NativeRendering
                 text: `${Icons.fluent.volume.l2}`
             }
         }
@@ -56,7 +54,6 @@ RowLayout {
                     pointSize: Config.font.pointSize
                     family: Config.font.family
                 }
-                renderType: Text.NativeRendering
                 Layout.alignment: Qt.AlignRight
                 Process {
                     command: ["date", "+%I:%M %p"]
@@ -73,7 +70,6 @@ RowLayout {
                     pointSize: Config.font.pointSize
                     family: Config.font.family
                 }
-                renderType: Text.NativeRendering
                 Layout.alignment: Qt.AlignRight
                 Process {
                     command: ["date", "+%d/%m/%Y"]
