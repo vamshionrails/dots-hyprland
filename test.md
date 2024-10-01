@@ -1,12 +1,13 @@
-```
+from aws_cdk import (
+    Stack,
+    aws_ec2 as ec2,
+    aws_eks as eks,
+)
+from constructs import Construct
 
-from aws_cdk import core
-import aws_cdk.aws_ec2 as ec2
-import aws_cdk.aws_eks as eks
+class EksClusterStack(Stack):
 
-class EksClusterStack(core.Stack):
-
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
         # Import existing VPC
@@ -53,6 +54,3 @@ class EksClusterStack(core.Stack):
             bootstrap_enabled=True,
             private_networking=True
         )
-
-
-```
