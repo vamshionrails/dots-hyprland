@@ -1,3 +1,5 @@
+```
+
 from aws_cdk import core
 import aws_cdk.aws_ec2 as ec2
 import aws_cdk.aws_eks as eks
@@ -51,3 +53,6 @@ class EksClusterStack(core.Stack):
             bootstrap_enabled=True,
             private_networking=True
         )
+
+
+```
